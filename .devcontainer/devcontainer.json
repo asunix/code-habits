@@ -1,14 +1,6 @@
 {
   "name": "Code Habits",
   "image": "mcr.microsoft.com/devcontainers/base:bullseye",
-  "features": {
-    "ghcr.io/devcontainers-extra/features/ansible:2": {
-      "version": "latest"
-    },
-    "ghcr.io/devcontainers-extra/features/pre-commit:2": {
-      "version": "latest"
-    }
-  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -32,8 +24,7 @@
         "explorer.confirmDragAndDrop": false,
         "files.exclude": {
           "**/.DS_Store": true,
-          "**/.git": true,
-          "**/.project": true
+          "**/.git": true
         },
         "telemetry.telemetryLevel": "off",
         "workbench.colorTheme": "Abyss"
