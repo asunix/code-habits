@@ -1,0 +1,46 @@
+{
+  "name": "Code Habits",
+  "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+  "features": {
+    "ghcr.io/devcontainers-extra/features/ansible:2": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers-extra/features/pre-commit:2": {
+      "version": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.makefile-tools",
+        "richie5um2.vscode-sort-json",
+        "zainchen.json",
+        "ms-azuretools.vscode-docker",
+        "IBM.output-colorizer",
+        "DavidAnson.vscode-markdownlint",
+        "redhat.vscode-yaml",
+        "timonwong.shellcheck",
+        "redhat.ansible"
+      ],
+      "settings": {
+        "diffEditor.renderSideBySide": true,
+        "editor.suggestSelection": "first",
+        "editor.tabSize": 4,
+        "editor.wordWrap": "bounded",
+        "editor.wordWrapColumn": 200,
+        "explorer.confirmDelete": false,
+        "explorer.confirmDragAndDrop": false,
+        "files.exclude": {
+          "**/.DS_Store": true,
+          "**/.git": true,
+          "**/.project": true
+        },
+        "telemetry.telemetryLevel": "off",
+        "workbench.colorTheme": "Abyss"
+      }
+    }
+  },
+  "postCreateCommand": "sudo apt -qq update && sudo apt -qq install --yes bash-completion make",
+  "postStartCommand": "sudo apt -qq update",
+  "remoteUser": "vscode"
+}
