@@ -20,9 +20,9 @@ habits/remove: \
 
 .PHONY: habits/submodule/remove
 habits/submodule/remove:
- 	-git submodule deinit --force habits
- 	-git rm --cached habits/
- 	@rm -rf habits
+	-git submodule deinit --force habits
+	-git rm --cached habits/
+	@rm -rf habits
 
 .PHONY: habits/check
 ## Performs checks
