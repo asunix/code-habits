@@ -17,17 +17,17 @@ ansible/install:
 	@sudo add-apt-repository --yes --update ppa:ansible/ansible
 	@sudo apt install --yes ansible
 
-#.PHONY: ansible/playbooks/doc/init
-#ansible/playbooks/doc/init:
-#	cd $(HABITS)/lib/ansible && ansible-playbook playbooks/doc/init.yaml --extra-vars="workspace=$(WORKSPACE) habits=$(HABITS)"
+.PHONY: ansible/playbooks/doc/init
+ansible/playbooks/doc/init:
+	cd $(HABITS)/lib/ansible && ansible-playbook playbooks/doc/init.yaml --extra-vars="workspace=$(WORKSPACE) habits=$(HABITS)"
 
-#.PHONY: ansible/playbooks/doc/build
-#ansible/playbooks/doc/build:
-#	@cd $(HABITS)/lib/ansible && ansible-playbook playbooks/doc/build.yaml --extra-vars="workspace=$(WORKSPACE) habits=$(HABITS)" --extra-vars=@$(WORKSPACE)/doc/habits.yaml
+.PHONY: ansible/playbooks/doc/build
+ansible/playbooks/doc/build:
+	@cd $(HABITS)/lib/ansible && ansible-playbook playbooks/doc/build.yaml --extra-vars="workspace=$(WORKSPACE) habits=$(HABITS)" --extra-vars=@$(WORKSPACE)/doc/habits.yaml
 
-#.PHONY: ansible/playbooks/doc/remove
-#ansible/playbooks/doc/remove:
-#	@cd $(HABITS)/lib/ansible && ansible-playbook playbooks/doc/remove.yaml --extra-vars="workspace=$(WORKSPACE) habits=$(HABITS)"
+.PHONY: ansible/playbooks/doc/remove
+ansible/playbooks/doc/remove:
+	@cd $(HABITS)/lib/ansible && ansible-playbook playbooks/doc/remove.yaml --extra-vars="workspace=$(WORKSPACE) habits=$(HABITS)"
 
 # .PHONY: ansible/playbooks/github/actions/init
 # ansible/playbooks/github/actions/init:
